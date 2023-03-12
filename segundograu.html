@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equaçao</title>
+    <style>
+        :root{
+    --cor1: rgb(255, 255, 255);
+    --cor2: #c5d0ff;
+    --cor3: rgba(0, 76, 255, 0.53);
+    --sombra:-1px -1px 7px  rgba(0, 0, 0, 0.392); 
+} 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background-color: var(--cor1);  
+    color: black;
+    font-size: 1em;
+    
+}
+
+
+#corpo{
+   
+    
+    
+    font-size: 1em;
+    text-align: center;
+    color: #000000;
+    background-color:var(--cor3);
+    border-radius: 15px;
+    margin: auto;
+    padding: 10px;
+    
+    box-shadow: var(--sombra);
+    min-width: 300px;
+    max-width: 600px;
+    
+
+}
+nav{
+    font-weight: bold;
+
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto ;
+    top: 76px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    
+    width: 100%;
+}
+nav > a{
+    display: inline;
+    
+    
+    margin-bottom: 5px;
+   
+    text-decoration: none;
+    color: #0000009c;
+    font-size: 0.9em;
+    border-radius: 5px;
+    background-color: var(--cor2);
+    padding:2px;
+    transition: 0.5s;
+    box-shadow: var(--sombra);
+   
+}
+nav>a:hover{
+
+    background-color: #0000009c;
+    color: var(--cor2);
+    font-size: 12pt;
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+#resultado{
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    margin: auto;
+    box-shadow: var(--sombra);
+}
+
+input{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 16pt;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor2);
+    transition: 0.3s;
+    
+}
+input:hover{
+    background-color: var(--cor3);
+    transition: 0.3s;
+    border: none;
+}
+
+
+
+button{
+font-size: 13px;
+border: none;
+padding: 5px;
+background-color:var(--cor2);
+border-radius: 6px;
+transition: 0.5s;
+    
+}
+button:hover{
+    background-color:#ffffff60 ;
+    text-shadow: var(--sombra);
+    transition: 0.5s;
+}
+
+#dados{
+   
+    border-radius: 13px;
+    box-shadow: var(--sombra);
+    padding: 10px;
+}
+#inter{
+    font-size: 16pt;
+}
+#titulo{
+    position: relative;
+    background-color: var(--cor3);
+    text-align: center;
+   
+    color: #0000009c;
+    height: 105px;
+   margin-bottom: 10px;
+   box-shadow: var(--sombra);
+   
+              
+}
+
+#res{
+    border-radius: 13px;
+    box-shadow: var(--sombra);
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 100px;
+    display: none;
+
+}
+
+#del{
+    display: none;
+    border-radius: 13px;
+    box-shadow: var(--sombra);
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 100px;
+}
+footer{
+    text-align: center;
+    margin-top: 15px;
+    vertical-align: bottom;
+}
+    </style>
+
+    
+</head>
+<body>
+   
+  
+        <header id="titulo">
+            <h1> Calculando equação do segundo grau</h1>
+            <nav>
+                <a href="biquadratica.html">Biquadratica</a>
+                <a href="segundograu.html">Segundo Grau</a>
+               </nav>
+                
+           
+        </header>
+        <section id="corpo">
+            <div id="dados">
+            <p>Para calcular equaçao do segundo grau voce precisa ter a seguinte experessao ax&#178+bx+c=0</p>
+            <p id = "inter">
+                <label >
+                    <input id="a">
+                </label>
+                x&#178 &#177 
+                <label >
+                   <input id="b">
+                </label>
+                 x &#177
+                <label >
+                    <input id="c">
+                </label>
+                 =0 
+                 <button id="button" type="button" onclick="calcular()"> 
+                    CALCULAR 
+                </button>
+            </p>
+            </div>
+            <div id="del"></div>
+            <div id="res"> </div>
+
+        
+
+        </section>
+        <footer >
+            <p><strong>OBS: </strong> html, css , javascript criado por Rento Makiesse do Amaral Norberto </p>
+        </footer>
+
+
+    </div>
+    <script>
+        function calcular(){
+            
+        let ax= document.getElementById('a')
+        let bx= document.getElementById('b') 
+        let cx= document.getElementById('c')
+        let cdel = document.getElementById('del')
+        let res= document.getElementById('res')
+        cdel.style.display='block'
+        res.style.display='block'
+
+
+    if(ax.value.length == 0 ){// se o programa nao tiver x2 entao
+        window.alert('Por favor preencha os quadrados')
+        cdel.style.display='none'
+        res.style.display='none'
+        }else if(cx.value.length == 0){
+            let a = Number(ax.value)
+            let b = Number(bx.value) 
+            let c = Number(cx.value)
+            cdel.innerHTML=''
+            res.innerHTML=''
+           
+            
+            resultado = b/a
+            cdel.innerHTML=`Como nao tem o ultimo valor entao:  <br> (${a}) x2 + (${b})x =0 <br> x((${a}) + ${b}) =0  <br> x= 0 V x= (${a})x + ${b} =0 <br><br> <p id = resultado> x= 0 V x =  ${-resultado.toFixed(3)}<br>Nesse caso o valor de x esta entre { ${-resultado.toFixed(3)}, 0} </p>   `
+    
+        }else if ( bx.value.length == 0){ //se o x for 0
+            let a = Number(ax.value)
+            let b = Number(bx.value) 
+            let c = Number(cx.value)
+            cdel.innerHTML=''
+            res.innerHTML=''
+            cdel.innerHTML=` Como nao tem valor de x entao : <br> (${a})x2 + (${c}) =0 <br> x2= (${-c})/(${a}) <br> x = raiz(${((-c)/a).toFixed(3)})<br><br> `
+            resultado = (-c)/a
+            if (resultado<0){
+                cdel.innerHTML='esta equaçao nao esta exata'
+            }else{
+                raiz= Math.sqrt(resultado)
+            cdel.innerHTML+= `<p id = resultado> x= ${raiz.toFixed(3)}<br> O resultado pode ser negativo e positivo nesse caso x = {-${raiz.toFixed(3)},${raiz.toFixed(3)}}</p>`
+
+            }
+            
+
+        }else if (ax.value.length != 0 & bx.value.length != 0 & cx.value.length != 0 ){//leitura dos valores  e calculo do delta e esuqçao segundo grau completa
+        let a = Number(ax.value)
+        let b = Number(bx.value) 
+        let c = Number(cx.value)
+        cdel.innerHTML=''
+        cdel.innerHTML= `<p>Para este tipo de equaçao (${a})x2+(${b})x+(${c}) primeiro calculamos o delta</p>`
+        cdel.innerHTML+= `Delta = b.b-4.a.c<br>Delta = (${b}).(${b})-4. (${a}). (${c})<br>Delta= ${b*b}-${4*a*c} <br><br><p id = resultado> Delta = ${b*b-4*a*c}</p>`
+        let delt = b*b-4*a*c
+        // criador Renato
+        let raizdelt = Math.sqrt(delt)
+        if (delt<0) {// euaçao do segundo grau se o delta for menor que zero
+            res.innerHTML=''
+            res.innerHTML='Esta équaçao nao esta exata pk o delta é menor que zero, verifique os seus dados'
+        } else if(delt==0){// eauaçao do segundo grau se o delta for = 0
+            res.innerHTML=''
+            res.innerHTML='Como delta é =0 entao calculamos apenas um x: <br>'
+            res.innerHTML+=`x = -b/2.a <br> x = - (${b}) / 2.(${a}) <br> x= ${-b/2*a}`
+            
+        } else  {// equaçao do segundo grau completa
+           res.innerHTML=''
+           let ad=2*a
+           let xu= (-b + raizdelt)/ad 
+           let xd = (-b - raizdelt)/ad
+           res.innerHTML='Como o delta é maior que 0 entao calculamos dois valores que nesse caso vai ser x1 x2:<br>'
+           res.innerHTML+='x1 =-B+ raiz(delta)/(2.a) <br> '
+           res.innerHTML+=`x1 =-(${b}) + raiz(${delt}) / (2.${a}) <br>`
+           res.innerHTML+=`x2 =-B- raiz(delta)/(2.a)<br> x2=-(${b}) - raiz(${delt}) / (2.${a}) `
+           res.innerHTML+=`<p>x1=((${-b}) + ${raizdelt.toFixed(3)})/ (${2*a}) <br> x2=((${-b}) - ${raizdelt.toFixed(3)})/ (${2*a})  </p><br>`
+           res.innerHTML+=`<p id = "resultado" style = " width: 190px;" >x1 =${xu.toFixed(3)}<br>x2=${xd.toFixed(3)}</p>`  
+        }
+    }
+    
+    
+    
+}
+        
+    </script>
+</body>
+</html>
