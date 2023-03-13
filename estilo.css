@@ -1,8 +1,8 @@
 :root{
     --cor1: rgb(255, 255, 255);
     --cor2: #fe7e57;
-    --cor3: #ff5f21;
-    --sombra:-1px -1px 7px  rgba(0, 0, 0, 0.392); 
+    --cor3: #ff6021b8;
+    --sombra:1px 1px 7px  rgba(0, 0, 0, 0.392); 
 } 
 *{
     padding: 0;
