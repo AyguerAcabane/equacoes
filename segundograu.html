@@ -20,7 +20,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     
-    background-color: var(--cor1);  
+     
     color: black;
     font-size: 1em;
     
@@ -170,6 +170,10 @@ footer{
     margin-top: 15px;
     vertical-align: bottom;
 }
+.image{
+    background: #000000 url('imagens/background.jpg') center center no-repeat cover fixed;
+}
+
     </style>
 
     
@@ -186,39 +190,39 @@ footer{
                 
            
         </header>
-        <section id="corpo">
-            <div id="dados">
-            <p>Para calcular equaçao do segundo grau voce precisa ter a seguinte experessao ax&#178+bx+c=0</p>
-            <p id = "inter">
-                <label >
-                    <input id="a">
-                </label>
-                x&#178 &#177 
-                <label >
-                   <input id="b">
-                </label>
-                 x &#177
-                <label >
-                    <input id="c">
-                </label>
-                 =0 
-                 <button id="button" type="button" onclick="calcular()"> 
-                    CALCULAR 
-                </button>
-            </p>
-            </div>
-            <div id="del"></div>
-            <div id="res"> </div>
-
-        
-
-        </section>
-        <footer >
-            <p><strong>OBS: </strong> html, css , javascript criado por Renato Makiesse do Amaral Norberto </p>
-        </footer>
-
-
-    </div>
+        <div class="image">
+            <section id="corpo">
+                <div id="dados">
+                <p>Para calcular equaçao do segundo grau voce precisa ter a seguinte experessao ax&#178+bx+c=0</p>
+                <p id = "inter">
+                    <label >
+                        <input id="a">
+                    </label>
+                    x&#178 &#177
+                    <label >
+                       <input id="b">
+                    </label>
+                     x &#177
+                    <label >
+                        <input id="c">
+                    </label>
+                     =0
+                     <button id="button" type="button" onclick="calcular()">
+                        CALCULAR
+                    </button>
+                </p>
+                </div>
+                <div id="del"></div>
+                <div id="res"> </div>
+            
+            </section>
+            <footer >
+                <p><strong>OBS: </strong> html, css , javascript criado por Renato Makiesse do Amaral Norberto </p>
+            </footer>
+            
+            
+                </div>
+        </div>
     <script>
         function calcular(){
             
