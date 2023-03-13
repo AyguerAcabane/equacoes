@@ -1,4 +1,15 @@
-
+function toque1(){
+    let ax= document.getElementById('a')
+    ax.value= ""
+}
+function toque2(){
+    let bx= document.getElementById('b')
+    bx.value= ""
+}
+function toque3(){
+    let cx= document.getElementById('c')
+    cx.value= ""
+}
         function calcular(){
             let ax= document.getElementById('a')
         let bx= document.getElementById('b') 

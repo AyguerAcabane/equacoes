@@ -1,4 +1,15 @@
-
+function toque1(){
+    let ax= document.getElementById('a')
+    ax.value= ""
+}
+function toque2(){
+    let bx= document.getElementById('b')
+    bx.value= ""
+}
+function toque3(){
+    let cx= document.getElementById('c')
+    cx.value= ""
+}
 function calcular(){
     
 let ax= document.getElementById('a')
@@ -10,7 +21,7 @@ cdel.style.display='block'
 res.style.display='block'
 
 
-if(ax.value.length == 0 ){// se o programa nao tiver x2 entao
+if(ax.value.length == 0 & ax ){// se o programa nao tiver x2 entao
 window.alert('Por favor preencha os quadrados')
 cdel.style.display='none'
 res.style.display='none'
