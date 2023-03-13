@@ -163,6 +163,8 @@ footer{
     text-align: center;
     margin-top: 15px;
     vertical-align: bottom;
+    width: 400px;
+    margin:auto;
 }
 .padding{
     padding: 15px;
