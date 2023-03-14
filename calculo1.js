@@ -77,11 +77,11 @@ if (delt<0) {// euaçao do segundo grau se o delta for menor que zero
    let xu= (-b + raizdelt)/ad 
    let xd = (-b - raizdelt)/ad
    res.innerHTML='Como o delta é maior que 0 entao calculamos dois valores que nesse caso vai ser x1 x2:<br>'
-   res.innerHTML+='x1 =-B+ raiz(delta)/(2.a) <br> '
-   res.innerHTML+=`x1 =-(${b}) + raiz(${delt}) / (2.${a}) <br>`
-   res.innerHTML+=`x2 =-B- raiz(delta)/(2.a)<br> x2=-(${b}) - raiz(${delt}) / (2.${a}) `
-   res.innerHTML+=`<p>x1=((${-b}) + ${raizdelt.toFixed(3)})/ (${2*a}) <br> x2=((${-b}) - ${raizdelt.toFixed(3)})/ (${2*a})  </p><br>`
-   res.innerHTML+=`<p id = "resultado" style = " width: 190px;" >x1 =${xu.toFixed(3)}<br>x2=${xd.toFixed(3)}</p>`  
+   res.innerHTML+='x =-B &#177 &#8730(delta) &frasl; (2.a) <br> '
+   res.innerHTML+=`x =-(${b}) &#177 &#8730(${delt}) &frasl; (2.${a}) <br>`
+   
+   res.innerHTML+=`<p>x<sub>1</sub>=((${-b}) + ${raizdelt.toFixed(3)}) &frasl; (${2*a}) <br> x<sub>2</sub>=((${-b}) - ${raizdelt.toFixed(3)}) &frasl; (${2*a})  </p><br>`
+   res.innerHTML+=`<p id = "resultado" style = " width: 190px;" >x<sub>1</sub> =${xu.toFixed(3)}<br>x<sub>2</sub>=${xd.toFixed(3)}</p>`  
 }
 }
 

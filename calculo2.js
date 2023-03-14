@@ -36,7 +36,7 @@ function toque3(){
            }else{
             resultado = b/a
             resultado = Math.sqrt(resultado)
-            cdel.innerHTML=`Primeiro vamos calcular como se fosse equaçao do segundo grau <br>Como nao tem o ultimo valor entao:  <br> (${a}) x2 + (${b})x =0 <br> x((${a}) + ${b}) =0  <br> x= 0 V x= (${a})x + ${b} =0 <br><br> <p id = resultado> Aqui temos o resultado da nossa equação <br> x= 0 V x =  ${-resultado.toFixed(3)}<br>Nesse caso o valor de x esta entre { ${-resultado.toFixed(3)}, 0} </p>   `
+            cdel.innerHTML=`Primeiro vamos calcular como se fosse equaçao do segundo grau <br>Como nao tem o ultimo valor entao:  <br> (${a}) x<sup>2</sup> + (${b})x =0 <br> x((${a}) + ${b}) =0  <br> x= 0 V x= (${a})x + ${b} =0 <br><br> <p id = resultado> Aqui temos o resultado da nossa equação <br> x= 0 V x =  ${-resultado.toFixed(3)}<br>Nesse caso o valor de x esta entre { ${-resultado.toFixed(3)}, 0} </p>   `
     
            }
             
@@ -47,7 +47,7 @@ function toque3(){
             let c = Number(cx.value)
             cdel.innerHTML=''
             res.innerHTML=''
-            cdel.innerHTML=` Acho que ja é custume que devemos calcular como se fosse equaçao do segundo grau <br>Como nao tem valor de x entao : <br> (${a})x2 + (${c}) =0 <br> x2= (${-c})/(${a}) <br> x = raiz(${((-c)/a).toFixed(3)})<br><br> `
+            cdel.innerHTML=` Acho que ja é custume que devemos calcular como se fosse equaçao do segundo grau <br>Como nao tem valor de x entao : <br> (${a})x<sup>2</sup> + (${c}) =0 <br> x<sup>2</sup>= (${-c})/(${a}) <br> x = raiz(${((-c)/a).toFixed(3)})<br><br> `
             resultado = (-c)/a
             if (resultado<0){
                 cdel.innerHTML='esta equaçao nao esta exata'
@@ -92,19 +92,19 @@ function toque3(){
                 x=x.toFixed(3)
                 xd='esse x não tem valor'
             }
-            res.innerHTML+= `<br>Ainda nao resolvemos equaçao do bidratica, o nosso x da equaçao biqudrticao vai ser iqual a raiz do x da equaçao do segundo grau <br> <p id=resultado>x1=${x} <br> x2=${xd}</p>`
+            res.innerHTML+= `<br>Ainda nao resolvemos equaçao do bidratica, o nosso x da equaçao biquadratica vai ser iqual a raiz do x da equaçao do segundo grau <br> <p id=resultado>x<sub>1</sub>=${x} <br> x<sub>2</sub>=${xd}</p>`
             
         } else  {// equaçao do segundo grau completa
            res.innerHTML=''
            let ad=2*a
            let xu= (-b + raizdelt)/ad 
            let xd = (-b - raizdelt)/ad
-           res.innerHTML='Como o delta é maior que 0 entao calculamos dois valores que nesse caso vai ser x1 x2:<br>'
-           res.innerHTML+='x1 =-B+ raiz(delta)/(2.a) <br> '
-           res.innerHTML+=`x1 =-(${b}) + raiz(${delt}) / (2.${a}) <br>`
-           res.innerHTML+=`x2 =-B- raiz(delta)/(2.a)<br> x2=-(${b}) - raiz(${delt}) / (2.${a}) `
-           res.innerHTML+=`<p>x1=((${-b}) + ${raizdelt.toFixed(3)})/ (${2*a}) <br> x2=((${-b}) - ${raizdelt.toFixed(3)})/ (${2*a})  </p><br>`
-           res.innerHTML+=`<p>x1 =${xu.toFixed(3)}<br>x2=${xd.toFixed(3)}</p><br>`
+           res.innerHTML='Como o delta é maior que 0 entao calculamos dois valores que nesse caso vai ser x<sub>1</sub> x<sub>2</sub>:<br>'
+           res.innerHTML+='x<sub>1</sub>=-B+ raiz(delta)/(2.a) <br> '
+           res.innerHTML+=`x<sub>1</sub> =-(${b}) + raiz(${delt}) / (2.${a}) <br>`
+           
+           res.innerHTML+=`<p>x<sub>1</sub>=((${-b}) + ${raizdelt.toFixed(3)})/ (${2*a}) <br> x<sub>2</sub>=((${-b}) - ${raizdelt.toFixed(3)})/ (${2*a})  </p><br>`
+           res.innerHTML+=`<p>x<sub>1</sub> =${xu.toFixed(3)}<br>x<sub>2</sub>=${xd.toFixed(3)}</p><br>`
            xu=xu.toFixed(3)
            xd=xd.toFixed(3)
            let xt=xu
@@ -116,11 +116,11 @@ function toque3(){
            }else if(xu>0 & xd<0){//x1 menor que zero e x2 maior que zero  
             xu=Math.sqrt(xu)  
             xu=xu.toFixed(3)     
-           res.innerHTML+= `Ainda nao resolvemos equaçao do biquadratica, o nosso x da equaçao biquadratica vai ser iqual a raiz do x da equaçao do segundo grau <br><br> <p id=resultado>como x2 é negattivo entao calculamos apenas o x1 que tera dois valores o negativo e o positivo<br>x1=${-xu} <br> x2=${xu}</p>`
+           res.innerHTML+= `Ainda nao resolvemos equaçao do biquadratica, o nosso x da equaçao biquadratica vai ser iqual a raiz do x da equaçao do segundo grau <br><br> <p id=resultado>como x<sub>2</sub> é negattivo entao calculamos apenas o x<sub>1</sub> que tera dois valores o negativo e o positivo<br>x<sub>1</sub>=${-xu} <br> x<sub>2</sub>=${xu}</p>`
            }else if(xd>0 & xu<0){//x1 menor que zero e x2 maior que zero  
             xd=Math.sqrt(xd)  
             xd=xd.toFixed(3)     
-            res.innerHTML+= `Ainda nao resolvemos equaçao do biquadratica, o nosso x da equaçao biquadratica vai ser iqual a raiz do x da equaçao do segundo grau <br><br> <p id=resultado>como x1 é negattivo entao calculamos apenas o x2 que tera dois valores o negativo e o positivo<br>x1=${-xd} <br> x2=${xd}</p>`
+            res.innerHTML+= `Ainda nao resolvemos equaçao do biquadratica, o nosso x da equaçao biquadratica vai ser iqual a raiz do x da equaçao do segundo grau <br><br> <p id=resultado>como x<sub>1</sub> é negattivo entao calculamos apenas o x<sub>2</sub> que tera dois valores o negativo e o positivo<br>x<sub>1</sub>=${-xd} <br> x<sub>2</sub>=${xd}</p>`
            }else{
             xu=Math.sqrt(xu)
             xd=Math.sqrt(xd)
