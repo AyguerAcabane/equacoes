@@ -15,20 +15,26 @@ function calcular(){
 let ax= document.getElementById('a')
 let bx= document.getElementById('b') 
 let cx= document.getElementById('c')
+let a = Number(ax.value)
+let b = Number(bx.value)
+let c = Number(cx.value)
+let at = a
+let bt = b
+let ct = c
+console.log(`${a}${b}${c}`)
+
 let cdel = document.getElementById('del')
 let res= document.getElementById('res')
 cdel.style.display='block'
 res.style.display='block'
 
 
-if(ax.value.length == 0 & ax ){// se o programa nao tiver x2 entao
+if( at== 'NaN'  ){// se o programa nao tiver x2 entao
 window.alert('Por favor preencha os quadrados')
 cdel.style.display='none'
 res.style.display='none'
-}else if(cx.value.length == 0){
-    let a = Number(ax.value)
-    let b = Number(bx.value) 
-    let c = Number(cx.value)
+}else if(ct== NaN){
+    
     cdel.innerHTML=''
     res.innerHTML=''
    
@@ -36,10 +42,8 @@ res.style.display='none'
     resultado = b/a
     cdel.innerHTML=`Como nao tem o ultimo valor entao:  <br> (${a}) x2 + (${b})x =0 <br> x((${a}) + ${b}) =0  <br> x= 0 V x= (${a})x + ${b} =0 <br><br> <p id = resultado> x= 0 V x =  ${-resultado.toFixed(3)}<br>Nesse caso o valor de x esta entre { ${-resultado.toFixed(3)}, 0} </p>   `
 
-}else if ( bx.value.length == 0){ //se o x for 0
-    let a = Number(ax.value)
-    let b = Number(bx.value) 
-    let c = Number(cx.value)
+}else if ( bt==NaN){ //se o x for 0
+   
     cdel.innerHTML=''
     res.innerHTML=''
     cdel.innerHTML=` Como nao tem valor de x entao : <br> (${a})x2 + (${c}) =0 <br> x2= (${-c})/(${a}) <br> x = raiz(${((-c)/a).toFixed(3)})<br><br> `
@@ -53,10 +57,8 @@ res.style.display='none'
     }
     
 
-}else if (ax.value.length != 0 & bx.value.length != 0 & cx.value.length != 0 ){//leitura dos valores  e calculo do delta e esuqçao segundo grau completa
-let a = Number(ax.value)
-let b = Number(bx.value) 
-let c = Number(cx.value)
+}else if (at != NaN & bt != NaN & ct!= NaN ){//leitura dos valores  e calculo do delta e esuqçao segundo grau completa
+
 cdel.innerHTML=''
 cdel.innerHTML= `<p>Para este tipo de equaçao (${a})x2+(${b})x+(${c}) primeiro calculamos o delta</p>`
 cdel.innerHTML+= `Delta = b.b-4.a.c<br>Delta = (${b}).(${b})-4. (${a}). (${c})<br>Delta= ${b*b}-${4*a*c} <br><br><p id = resultado> Delta = ${b*b-4*a*c}</p>`

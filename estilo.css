@@ -1,7 +1,7 @@
 :root{
-    --cor1: rgb(255, 255, 255);
-    --cor2: #fe7e57;
-    --cor3: #ff6021b8;
+    --cor1: rgb(212, 255, 0);
+    --cor2: #ed0000;
+    --cor3: #292929b8;
     --sombra:1px 1px 7px  rgba(0, 0, 0, 0.392); 
 } 
 *{
@@ -11,7 +11,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: #000000 url('imagens/background.jpg') center center no-repeat fixed;
+    background: linear-gradient(45deg, black, white);
     background-size: cover;
      
     color: black;
@@ -49,18 +49,16 @@ nav{
     padding: 10px;
     margin: 10px auto ;
     top: 76px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    
+    left: 20%;
     width: 100%;
 }
 nav > a{
     display: inline;
-    
-    
+    position: absolute;
+    transform: translate(-50%,-50%);
     margin-bottom: 5px;
-   
+    left: 50%;
+    top: 80px;
     text-decoration: none;
     color: #0000009c;
     font-size: 0.9em;
@@ -97,6 +95,7 @@ input{
     border-radius: 5px;
     background-color: var(--cor2);
     transition: 0.3s;
+    background-color: #ababab;
     
 }
 input:hover{
@@ -109,7 +108,7 @@ input:hover{
 
 button{
 font-size: 13px;
-border: none;
+border: 1px solid black;
 padding: 5px;
 background-color:var(--cor2);
 border-radius: 6px;
@@ -123,7 +122,7 @@ button:hover{
 }
 
 #dados{
-   
+   font-size: 1.2em;
     border-radius: 13px;
     box-shadow: var(--sombra);
     padding: 10px;
