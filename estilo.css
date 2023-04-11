@@ -1,8 +1,8 @@
 :root{
    
     --cor4: #00E6F5;
-    --cor5:#00A9B5;
-    --cor5:#006D75;
+    --cor5:#00676e;
+  
     --cor6: #003236;
     --sombra:1px 1px 7px  rgba(0, 0, 0, 0.392); 
 } 
@@ -10,11 +10,15 @@
     padding: 0;
     margin: 0;
 }
-
+#relative{
+ 
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(45deg,var(--cor4), var(--cor6));
-    height: 100vh;
+    background: var(--cor5);
+    background-repeat: no-repeat;
+   width: 96vw;
+   height: 100vh;
     background-size: cover;
      
     color: black;
@@ -98,7 +102,7 @@ input{
     border-radius: 5px;
     background-color: var(--cor2);
     transition: 0.3s;
-    background-color: #ababab;
+    background-color: var(--cor5);
     
 }
 input:hover{
@@ -111,7 +115,7 @@ input:hover{
 
 button{
 font-size: 13px;
-border: 1px solid black;
+border: none;
 padding: 5px;
 background-color:var(--cor2);
 border-radius: 6px;
@@ -119,7 +123,7 @@ transition: 0.5s;
     
 }
 button:hover{
-    background-color:#ffffff60 ;
+    background-color:var(--cor5) ;
     text-shadow: var(--sombra);
     transition: 0.5s;
 }
@@ -137,10 +141,11 @@ button:hover{
     position: relative;
     background-color: var(--cor3);
     text-align: center;
+    width: 96vw;
    
     color: #0000009c;
     height: 105px;
-   margin-bottom: 10px;
+   
    box-shadow: var(--sombra);
    
               
@@ -165,11 +170,11 @@ button:hover{
     min-height: 100px;
 }
 footer{
-    background-color: rgba(240, 248, 255, 0.301);
+   
     text-align: center;
     margin-top: 15px;
     vertical-align: bottom;
-    width: 400px;
+    width: 360px;
     margin:auto;
 }
 .padding{
